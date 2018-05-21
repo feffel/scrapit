@@ -2,8 +2,9 @@
 import re
 import time
 
-from scraper import settings
-from scraper.utils import format_date, chrome
+from apps.scraper.scraper import settings
+from apps.scraper.scraper.utils import chrome
+from apps.scraper.scraper.utils import format_date
 from scrapy.http import Request
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-from scraper import settings
+from apps.scraper.scraper import settings
 from datetime import date
 from scrapy.http import Request
 

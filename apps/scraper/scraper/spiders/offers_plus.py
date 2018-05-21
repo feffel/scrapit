@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-from scraper import settings
+from apps.scraper.scraper import settings
 from dateutil.parser import parse
 from scrapy.http import Request
 from scrapy.linkextractors import LinkExtractor

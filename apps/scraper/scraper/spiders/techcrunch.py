@@ -3,8 +3,8 @@ import json
 import re
 import scrapy
 
-from scraper import settings
-from scraper.utils import format_date
+from apps.scraper.scraper import settings
+from apps.scraper.scraper.utils import format_date
 from scrapy.http import Request
 
 

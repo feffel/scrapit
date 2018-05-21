@@ -11,10 +11,10 @@
 
 BOT_NAME = 'scraper'
 
-SPIDER_MODULES = ['scraper.spiders']
-NEWSPIDER_MODULE = 'scraper.spiders'
+SPIDER_MODULES = ['apps.scraper.scraper.spiders']
+NEWSPIDER_MODULE = 'apps.scraper.scraper.spiders'
 
-MAX_ENTRIES = 50
+MAX_ENTRIES = 100
 MAX_AGE = 3
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'scraper (+https://felfel.ch/en/)'
@@ -65,9 +65,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scraper.pipelines.scraperPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'apps.scraper.scraper.pipelines.ScraperAppPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

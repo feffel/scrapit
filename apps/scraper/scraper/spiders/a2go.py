@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-import scrapy
 import re
-from scrapy.linkextractors import LinkExtractor
-from scrapy.spiders import CrawlSpider, Rule
+
 from dateutil.parser import parse
+from scrapy.linkextractors import LinkExtractor
+from scrapy.spiders import CrawlSpider
+from scrapy.spiders import Rule
 
 
 class A2goSpider(CrawlSpider):

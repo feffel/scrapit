@@ -17,7 +17,7 @@ RUN gdebi chrome.deb -n && rm chrome.deb
 
 COPY requirments.txt /requirments.txt
 RUN pip install --upgrade pip
-RUN pip install -r requirments.txt --user
+RUN pip install -r requirments.txt
 
 COPY /start-dev.sh /start-dev.sh
 RUN sed -i 's/\r//' /start-dev.sh

@@ -1,0 +1,45 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Scraper View</title>
+  <meta name="description" content="This is out new cool product. a demo app dude.">
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{%static "main.css"%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="fancy-bg">
+  <div class="container">
+    <div class="row">
+      <div class="a">
+      </div>
+      <div class="b">
+        {% for article in articles%}
+          <a href="{{article.url}}" target="_blank">
+            <div class="image">
+              {%if article.img == None%}
+                <img class="a" src="https://mave.me/img/projects/full_placeholder.png"/>
+              {%else%}
+                <img class="a" src="{{article.img}}"/>
+              {%endif%}
+              <h2> <br><br>{{article.headline}}</h2>
+              <h4 class="left">{{article.domain}}</h4>
+              <h4 class="right">{{article.date}}</h4>
+            </div>
+          </a>          
+          <br>
+          <br>
+        {% endfor %}
+      </div>
+      <div class="c">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
