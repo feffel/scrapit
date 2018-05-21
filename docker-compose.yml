@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: /start-dev.sh
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
